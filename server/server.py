@@ -7,6 +7,10 @@ app=Flask(__name__)
 CORS(app)
 # database.init_db()
 
+@app.route("/")
+def home():
+    return "Real Estate Price Prediction API Running"
+
 @app.route('/get_location_names')
 def get_location_names():
     response=jsonify({
